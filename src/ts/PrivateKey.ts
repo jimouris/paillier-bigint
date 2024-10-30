@@ -69,7 +69,7 @@ export default class PrivateKey {
    * @returns The random factor r (mod n)
    *
    * @throws {@link RangeError}
-   * Cannot recover the random factor if publicKey.g != publicKey.n + 1. You should generate yout keys using the simple variant, e.g. generateRandomKeys(3072, true)  (see {@link generateRandomKeys})
+   * Cannot recover the random factor if publicKey.g != publicKey.n + 1. You should generate your keys using the simple variant, e.g. generateRandomKeys(3072, true)  (see {@link generateRandomKeys})
    *
    * @throws {@link Error}
    * Cannot get random factor without knowing p and q

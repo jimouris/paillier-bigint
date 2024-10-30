@@ -5,7 +5,7 @@
 
 # {{PKG_NAME}}
 
-An implementation of the Paillier cryptosystem relying on the native JS implementation of BigInt. 
+An implementation of the Paillier cryptosystem relying on the native JS implementation of BigInt.
 
 It can be used by any [Web Browser or webview supporting BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#Browser_compatibility) and with Node.js (>=10.4.0). In the latter case, for multi-threaded primality tests, you should use Node.js v11 or newer or enable at runtime with `node --experimental-worker` with Node.js version >= 10.5.0 and < 11.
 
@@ -44,7 +44,7 @@ these messages without knowing the private key.
 ## Key generation
 
 1. Define the bit length of the modulus `n`, or `keyLength` in bits.
-2. Choose two large prime numbers `p` and `q` randomly and independently of each other such that `gcd( p·q, (p-1)(q-1) )=1` and `n=p·q` has a key length of keyLength. For instance:
+2. Choose two large prime numbers `p` and `q` randomly and independently of each other such that `gcd( p·q, (p-1)(q-1) )=1` and `n=p·q` has a key length of `keyLength`. For instance:
    1. Generate a random prime `p` with a bit length of `keyLength/2 + 1`.
    2. Generate a random prime `q` with a bit length of `keyLength/2`.
    3. Repeat until the bitlength of `n=p·q` is `keyLength`.
@@ -57,11 +57,11 @@ these messages without knowing the private key.
       1. `λ = (p-1, q-1)`
       2. `g = n+1`
       3. `μ = λ**(-1) mod n`
-   
+
 The **public** (encryption) **key** is **(n, g)**.
 
-The **private** (decryption) **key** is **(λ, μ)**. 
-  
+The **private** (decryption) **key** is **(λ, μ)**.
+
 ## Encryption
 Let `m` in `[0, n)` be the clear-text message,
 
